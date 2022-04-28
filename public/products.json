@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Ford Mustang",
+        "img": "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900",
+        "description": "Short description of Shelby GT500 Performance",
+        "price": 10500,
+        "quantity": 1,
+        "supplierName": "Ford"
+    },
+    {
+        "_id": 2,
+        "name": "Ford Mustang",
+        "img": "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900",
+        "description": "Short description of Shelby GT500 Performance",
+        "price": 10500,
+        "quantity": 1,
+        "supplierName": "Ford"
+    },
+    {
+        "_id": 3,
+        "name": "Ford Mustang",
+        "img": "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900",
+        "description": "Short description of Shelby GT500 Performance",
+        "price": 10500,
+        "quantity": 1,
+        "supplierName": "Ford"
+    },
+    {
+        "_id": 4,
+        "name": "Ford Mustang",
+        "img": "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900",
+        "description": "Short description of Shelby GT500 Performance",
+        "price": 10500,
+        "quantity": 1,
+        "supplierName": "Ford"
+    },
+    {
+        "_id": 5,
+        "name": "Ford Mustang",
+        "img": "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900",
+        "description": "Short description of Shelby GT500 Performance",
+        "price": 10500,
+        "quantity": 1,
+        "supplierName": "Ford"
+    },
+    {
+        "_id": 6,
+        "name": "Ford Mustang",
+        "img": "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900",
+        "description": "Short description of Shelby GT500 Performance",
+        "price": 10500,
+        "quantity": 1,
+        "supplierName": "Ford"
+    }
+]
