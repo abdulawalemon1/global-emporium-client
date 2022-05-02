@@ -11,7 +11,7 @@ const Products = () => {
             .then(data => setProducts(data))
     }, [])
     return (
-        <div>
+        <div id='products' className='container'>
             <h2 className='products-title'>Products: {products.length}</h2>
             <div className="products-container">
 

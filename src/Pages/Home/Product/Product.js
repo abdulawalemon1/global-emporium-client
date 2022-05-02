@@ -7,12 +7,16 @@ const Product = ({ product }) => {
 
     return (
         <div className='single-card'>
-            <img src={img} alt="" />
-            <h2> {name}</h2>
-            <h3>Price: {price}</h3>
-            <p>Quantity: {quantity}</p>
-            <p>Supplier: {supplierName}</p>
-            <p>{description}</p>
+            <div>
+                <img src={img} alt="" />
+            </div>
+            <div className='px-2'>
+                <h2> {name}</h2>
+                <h3>Price: {price}</h3>
+                <p>Quantity: {quantity}</p>
+                <p>Supplier: {supplierName}</p>
+                <p>{description}</p>
+            </div>
             <button className='button-custom'>Update</button>
 
         </div>
