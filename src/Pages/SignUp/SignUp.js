@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../.firebase.init';
 
 const SignUp = () => {
     const emailRef = useRef('');
@@ -9,17 +11,28 @@ const SignUp = () => {
     const numberRef = useRef('');
     const navigate = useNavigate();
 
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
     const handleRegister = event => {
         event.preventDefault();
         const number = numberRef.current.value;
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passRef.current.value;
+        createUserWithEmailAndPassword(email, password);
 
 
     }
     const navigateToLogin = event => {
         navigate('/login');
+    }
+    if (user) {
+        navigate('/home');
     }
 
     return (
@@ -30,12 +43,12 @@ const SignUp = () => {
             <div>
                 <h2 className='text-center'>Sign Up</h2>
                 <Form onSubmit={handleRegister}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Name</Form.Label>
                         <Form.Control ref={nameRef} type="text" placeholder="Your Name" />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicNumber">
                         <Form.Label>Contact</Form.Label>
                         <Form.Control ref={numberRef} type="number" placeholder="Phone number" />
                     </Form.Group>
