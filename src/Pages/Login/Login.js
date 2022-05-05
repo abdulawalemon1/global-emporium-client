@@ -2,10 +2,12 @@ import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../.firebase.init';
 import SocialLogin from './SocialLogin/SocialLogin';
 import './Login.css';
+import Loading from '../Shared/Loading/Loading';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -40,6 +42,9 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
+    if (loading) {
+        return <Loading></Loading>
+    }
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
@@ -73,9 +78,10 @@ const Login = () => {
                     </Button>
                 </Form>
                 <p>New user? <Link to={"/signup"} className='text-primary text-decoration-none' onClick={navigateToRegister}>Sign Up</Link></p>
-                <p className='text-center mt-2'>Forgot Password? <Link to={"/signup"} className='btn-link  text-decoration-none border-0' onClick={resetPassword}>Reset Password</Link></p>
-
+                <p className='text-center mt-2'>Forget Password? <button to={"/register"} className='bg-light text-decoration-none border-0' onClick={resetPassword}>Reset Password</button></p>
+                {errorElement}
                 <SocialLogin></SocialLogin>
+                <ToastContainer></ToastContainer>
             </div>
 
 

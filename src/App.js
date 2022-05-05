@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blog from './Pages/Blog/Blog';
@@ -30,6 +31,7 @@ function App() {
         <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
       <Footer></Footer>
+
     </div>
   );
 }

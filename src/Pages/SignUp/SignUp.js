@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../.firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
+
 const SignUp = () => {
     const emailRef = useRef('');
     const passRef = useRef('');
@@ -17,7 +18,7 @@ const SignUp = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleRegister = event => {
         event.preventDefault();
@@ -32,9 +33,11 @@ const SignUp = () => {
     const navigateToLogin = event => {
         navigate('/login');
     }
+
     if (user) {
         navigate('/home');
     }
+
 
     return (
         <div className='d-flex '>
