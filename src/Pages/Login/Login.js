@@ -11,6 +11,7 @@ const Login = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passRef.current.value;
+        console.log(email, password);
 
     }
     const navigateToRegister = event => {

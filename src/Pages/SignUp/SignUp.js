@@ -16,6 +16,7 @@ const SignUp = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
 
+
     }
     const navigateToLogin = event => {
         navigate('/login');
