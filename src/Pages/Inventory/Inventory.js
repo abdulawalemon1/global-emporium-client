@@ -17,7 +17,6 @@ const Inventory = () => {
 
     const handleDeliver = event => {
 
-
         const quantity = product.quantity - 1;
         const updatedQuantity = { quantity };
         console.log(updatedQuantity);
@@ -34,6 +33,28 @@ const Inventory = () => {
                 console.log('success', data);
                 alert('Delivered!!!');
                 setIsReload(!reload)
+            })
+    }
+    const handleRestock = event => {
+        event.preventDefault();
+        const value = event.target.restock.value;
+        const quantity = product.quantity + parseInt(value);
+        const updatedQuantity = { quantity };
+        console.log(updatedQuantity);
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('success', data);
+                alert('Delivered!!!');
+                setIsReload(!reload)
+                event.target.reset();
             })
     }
 
@@ -53,10 +74,10 @@ const Inventory = () => {
 
                 </div>
                 <div>
-                    <Form>
+                    <Form onSubmit={handleRestock}>
                         <Form.Group className="mb-3" controlId="formBasicRestock">
                             <Form.Label className="d-flex justify-content-center text-success">Restock the Item</Form.Label>
-                            <Form.Control type="number" placeholder="Restock amount" />
+                            <Form.Control type="number" name="restock" placeholder="Restock amount" />
 
                         </Form.Group>
                         <Button className='w-100' variant="success" type="submit">
