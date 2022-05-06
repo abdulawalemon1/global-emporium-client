@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import useProducts from '../../Hooks/UseProducts';
 
 const Inventory = () => {
@@ -18,6 +19,9 @@ const Inventory = () => {
     const handleDeliver = event => {
 
         const quantity = product.quantity - 1;
+        if (quantity < 0) {
+            return toast('Sorry, The product is out of stock!')
+        }
         const updatedQuantity = { quantity };
         console.log(updatedQuantity);
         const url = `http://localhost:5000/product/${id}`;
@@ -30,14 +34,17 @@ const Inventory = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success', data);
-                alert('Delivered!!!');
+
+                toast('Product Delivered!');
                 setIsReload(!reload)
             })
     }
     const handleRestock = event => {
         event.preventDefault();
         const value = event.target.restock.value;
+        if (value < 0) {
+            return toast('Please enter a positive number!')
+        }
         const quantity = product.quantity + parseInt(value);
         const updatedQuantity = { quantity };
         console.log(updatedQuantity);
@@ -51,8 +58,8 @@ const Inventory = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success', data);
-                alert('Delivered!!!');
+
+                toast('Stock Updated!!');
                 setIsReload(!reload)
                 event.target.reset();
             })
@@ -84,6 +91,7 @@ const Inventory = () => {
                             Submit
                         </Button>
                     </Form>
+                    <ToastContainer></ToastContainer>
                 </div>
             </div>
         </div>
