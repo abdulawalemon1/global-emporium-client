@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import useProducts from '../../../Hooks/UseProducts';
 import Product from '../Product/Product';
 import './Products.css';
@@ -25,7 +26,9 @@ const Products = () => {
                 }
 
             </div>
-
+            <div className='my-4 text-end'>
+                <Link to='/manageInventory' className='btn btn-outline-dark p-3'>Manage Inventories</Link>
+            </div>
         </div>
     );
 };

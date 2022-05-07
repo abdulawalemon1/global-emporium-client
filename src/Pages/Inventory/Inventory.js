@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import useProducts from '../../Hooks/UseProducts';
 
@@ -90,6 +90,9 @@ const Inventory = () => {
                         <Button className='w-100' variant="success" type="submit">
                             Submit
                         </Button>
+                        <div className='my-4 text-end'>
+                            <Link to='/manageInventory' className='btn btn-outline-danger w-100'>Manage Inventories</Link>
+                        </div>
                     </Form>
                     <ToastContainer></ToastContainer>
                 </div>
