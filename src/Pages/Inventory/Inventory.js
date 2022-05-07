@@ -23,7 +23,7 @@ const Inventory = () => {
             return toast('Sorry, The product is out of stock!')
         }
         const updatedQuantity = { quantity };
-        console.log(updatedQuantity);
+
         const url = `http://localhost:5000/product/${id}`;
         fetch(url, {
             method: 'PUT',
