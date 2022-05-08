@@ -8,6 +8,7 @@ import auth from '../../.firebase.init';
 import SocialLogin from './SocialLogin/SocialLogin';
 import './Login.css';
 import Loading from '../Shared/Loading/Loading';
+import axios from 'axios';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -29,12 +30,13 @@ const Login = () => {
     if (error || error1) {
         errorElement = <p className='text-danger text-center'> {error?.message}{error1?.message}</p>
     }
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passRef.current.value;
-        signInWithEmailAndPassword(email, password);
-
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login', { email })
+        localStorage.setItem('accessToken', data.accessToken)
     }
     const navigateToRegister = event => {
         navigate('/signup');

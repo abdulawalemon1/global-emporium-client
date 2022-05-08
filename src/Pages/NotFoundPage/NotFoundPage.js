@@ -1,9 +1,9 @@
 import React from 'react';
-
+import errorPic from '../../images/errorPic.jpg';
 const NotFoundPage = () => {
     return (
-        <div>
-            <h2>Page not found</h2>
+        <div className=''>
+            <img className='img-fluid' src={errorPic} alt="" />
         </div>
     );
 };
