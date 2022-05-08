@@ -33,9 +33,9 @@ const ManageInventories = () => {
             <h2 className='text-center'>Manage Inventory</h2>
             <div className='d-flex'>
                 <div className='container text-center'>
-                    <Link to={'/manageInventory'} className='w-75 btn btn-outline-primary'>See All Items</Link>
+
                     <br />
-                    <Link to={"/additem"} className=' w-75 btn btn-outline-success'>Add New Item</Link>
+                    <Link to={"/additem"} className=' w-75 btn btn-outline-dark'>Add New Item</Link>
                 </div>
                 <div className="products-container">
 

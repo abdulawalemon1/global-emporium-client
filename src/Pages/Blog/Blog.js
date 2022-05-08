@@ -5,13 +5,13 @@ const Blog = () => {
     return (
         <div className='container'>
             <div>
-                <h3 className='text-info text-center'> Difference between JavaScript and NodeJS</h3>
+                <h3 className='text-dark text-center'> Difference between JavaScript and NodeJS</h3>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
 
-                            <th className='text-info text-center'>JavaScript</th>
-                            <th className='text-info text-center'>NodeJS</th>
+                            <th className=' text-center'>JavaScript</th>
+                            <th className='text-center'>NodeJS</th>
 
                         </tr>
                     </thead>
@@ -52,7 +52,7 @@ const Blog = () => {
                 </Table>
             </div>
             <div className='mt-4 mb-4'>
-                <h2 className='text-center text-info'>What is the purpose of jwt and how does it work?</h2>
+                <h2 className='text-center '>What is the purpose of jwt and how does it work?</h2>
                 <p className='container mt-4'>
                     JWT, or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.
 
@@ -74,14 +74,14 @@ const Blog = () => {
                 </p>
             </div>
             <div>
-                <h3 className='text-info text-center'> Difference between SQL and NOSQL</h3>
+                <h3 className='text-center'> Difference between SQL and NOSQL</h3>
                 <Table striped bordered hover>
 
                     <thead>
                         <tr>
 
-                            <th className='text-info text-center'>SQL</th>
-                            <th className='text-info text-center'>NOSQL</th>
+                            <th className='text-center'>SQL</th>
+                            <th className=' text-center'>NOSQL</th>
 
                         </tr>
                     </thead>
