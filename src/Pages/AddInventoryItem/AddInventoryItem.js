@@ -1,10 +1,14 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../.firebase.init';
+import axios from 'axios';
 
 const AddInventoryItem = () => {
+    const [user] = useAuthState(auth);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        const email = user.email;
         const url = `http://localhost:5000/product`;
         fetch(url, {
             method: "POST",
@@ -25,6 +29,7 @@ const AddInventoryItem = () => {
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
 
                 <input className='mb-2' type="text" placeholder='Name' {...register("name", { required: true })} />
+                <input className='mb-2' value={user.email} type="text" placeholder='Email' {...register("email", { required: true })} />
                 <input className='mb-2' type="number" placeholder='Price' {...register("price", { required: true })} />
                 <input className='mb-2' type="number" placeholder='Quantity' {...register("quantity", { required: true })} />
                 <input className='mb-2' type="text" placeholder='Supplier' {...register("supplierName", { required: true })} />
