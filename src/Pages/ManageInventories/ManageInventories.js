@@ -46,8 +46,8 @@ const ManageInventories = () => {
                                     <img src={product.img} alt="" />
                                 </div>
                                 <div className='px-2'>
-                                    <h2> {product.name}</h2>
-                                    <h3>Price: {product.price}</h3>
+                                    <h4> {product.name}</h4>
+                                    <p>Price: {product.price}</p>
                                     <p>Quantity: {product.quantity}</p>
                                     <p>Supplier: {product.supplierName}</p>
                                     <p>{product.description}</p>

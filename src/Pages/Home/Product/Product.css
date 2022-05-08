@@ -7,7 +7,7 @@
 }
 
 .single-card img {
-    max-width: 99%;
+    width: 100%;
     border-radius: 10px;
 }
 

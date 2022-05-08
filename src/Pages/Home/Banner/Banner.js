@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
-
+import car1 from '../../../images/car-banner1.jpg'
+import car2 from '../../../images/car-banner2.jpg'
+import car3 from '../../../images/car-banner3.jpg'
+import car4 from '../../../images/car-banner4.jpg'
+import car5 from '../../../images/car-banner5.jpg'
 const Banner = () => {
     const [index, setIndex] = useState(0);
 
@@ -13,7 +17,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900"
+                        src={car5}
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -24,7 +28,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900"
+                        src={car2}
                         alt="Second slide"
                     />
 
@@ -36,7 +40,21 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900"
+                        src={car3}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Third slide label</h3>
+                        <p>
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        </p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={car4}
                         alt="Third slide"
                     />
 
