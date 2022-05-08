@@ -31,7 +31,7 @@ const Products = () => {
 
     return (
         <div id="products" className='container'>
-            <h2 className='text-center'>Products: {products.length}</h2>
+            <h2 className='text-center text-light'>Products: {products.length}</h2>
             <div className="products-container">
 
                 {

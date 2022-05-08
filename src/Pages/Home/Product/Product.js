@@ -16,8 +16,8 @@ const Product = ({ product }) => {
             </div>
             <div className='px-2'>
                 <h3> {name}</h3>
-                <p>Price: {price}</p>
-                <p>Quantity: {quantity}</p>
+                <p >Price: {price}</p>
+                <p >Quantity: {quantity}</p>
                 <p>Supplier: {supplierName}</p>
                 <p>{description}</p>
             </div>
