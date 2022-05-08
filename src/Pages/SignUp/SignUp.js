@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../.firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import Loading from '../Shared/Loading/Loading';
+import './SignUp.css';
 
 
 const SignUp = () => {
@@ -44,12 +45,12 @@ const SignUp = () => {
 
 
     return (
-        <div className='d-flex '>
-            <div>
-                <img className='w-75 h-100' src="https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900" alt="" />
+        <div className='row '>
+            <div className='col-md-6'>
+                <img className='w-100 h-100' src="https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900" alt="" />
             </div>
-            <div>
-                <h2 className='text-center'>Sign Up</h2>
+            <div className='col-md-6'>
+                <h2 className=''>Please Sign Up</h2>
                 <Form onSubmit={handleRegister}>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Name</Form.Label>
@@ -73,7 +74,7 @@ const SignUp = () => {
                         <Form.Control ref={passRef} type="password" placeholder="Password" required />
                     </Form.Group>
 
-                    <Button className='w-100' variant="dark" type="submit">
+                    <Button className='' variant="dark" type="submit">
                         SignUp
                     </Button>
                 </Form>

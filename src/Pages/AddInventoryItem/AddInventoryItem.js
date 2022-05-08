@@ -35,7 +35,7 @@ const AddInventoryItem = () => {
                 <input className='mb-2' type="text" placeholder='Supplier' {...register("supplierName", { required: true })} />
                 <input className='mb-2' type="text" placeholder='Photo URL' {...register("img", { required: true })} />
 
-                <textarea className='mb-2' type="text" placeholder='Description' {...register("description", { required: true })} />
+                <textarea className='mb-2 w-100 text-dark' type="text" placeholder='Description' {...register("description", { required: true })} />
 
                 <input className='btn btn-outline-dark' type="submit" value="Add Item" />
 

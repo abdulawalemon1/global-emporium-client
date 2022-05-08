@@ -57,25 +57,25 @@ const Login = () => {
         }
     }
     return (
-        <div className='d-flex '>
-            <div>
-                <img className='w-75 h-100' src="https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900" alt="" />
+        <div className='row '>
+            <div className='col-md-7'>
+                <img className='w-100 h-100' src="https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/22_FRD_MST_55086_DSC09482_2.tif?croppathe=1_3x2&wid=900" alt="" />
             </div>
-            <div>
-                <h2 className='text-center'>Login</h2>
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+            <div className='col-md-5 '>
+                <h2 className=''>Please Login</h2>
+                <Form className='' onSubmit={handleSubmit}>
+                    <Form.Group className="mb-3 " controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
 
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3 " controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control ref={passRef} type="password" placeholder="Password" required />
                     </Form.Group>
 
-                    <Button className='w-100' variant="dark" type="submit">
+                    <Button className='' variant="dark" type="submit">
                         Login
                     </Button>
                 </Form>
