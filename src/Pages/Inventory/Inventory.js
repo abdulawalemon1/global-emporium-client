@@ -10,7 +10,7 @@ const Inventory = () => {
     const [reload, setIsReload] = useState(true);
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://boiling-meadow-89071.herokuapp.com/product/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data));
@@ -24,7 +24,7 @@ const Inventory = () => {
         }
         const updatedQuantity = { quantity };
 
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://boiling-meadow-89071.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -48,7 +48,7 @@ const Inventory = () => {
         const quantity = product.quantity + parseInt(value);
         const updatedQuantity = { quantity };
         console.log(updatedQuantity);
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://boiling-meadow-89071.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

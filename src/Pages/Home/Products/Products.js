@@ -15,7 +15,7 @@ const Products = () => {
     const getProducts = async () => {
         try {
             const data = await axios
-                .get('http://localhost:5000/product')
+                .get('https://boiling-meadow-89071.herokuapp.com/product')
                 .then(res => {
 
                     setProducts(res.data)

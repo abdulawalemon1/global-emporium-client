@@ -9,7 +9,7 @@ const AddInventoryItem = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         const email = user.email;
-        const url = `http://localhost:5000/product`;
+        const url = `https://boiling-meadow-89071.herokuapp.com/product`;
         fetch(url, {
             method: "POST",
             headers: {

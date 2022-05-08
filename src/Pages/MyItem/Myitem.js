@@ -12,7 +12,7 @@ const Myitem = () => {
     useEffect(() => {
         const getItem = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/item?email=${email}`;
+            const url = `https://boiling-meadow-89071.herokuapp.com/item?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -36,7 +36,7 @@ const Myitem = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://boiling-meadow-89071.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
